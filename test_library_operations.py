@@ -1,4 +1,7 @@
-def test_add_book(library) -> None:
+from main import Library
+
+
+def test_add_book(library: Library) -> None:
     library.add_book("The Great Gatsby", "F. Scott Fitzgerald")
     expected_books = [
         {"title": "To Kill a Mockingbird", "author": "Harper Lee"},
@@ -11,7 +14,7 @@ def test_add_book(library) -> None:
     )
 
 
-def test_get_book(library) -> None:
+def test_get_book(library: Library) -> None:
     library.add_book("The Catcher in the Rye", "J.D. Salinger")
 
     assert library.get_book(2) == "Title: The Catcher in the Rye, Author: J.D. Salinger"

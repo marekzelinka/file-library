@@ -1,5 +1,8 @@
+run:
+    uv run main.py
+
 test:
-    uv run pytest
+    uv run pytest -v
 
 typecheck:
     uv run pyrefly check
