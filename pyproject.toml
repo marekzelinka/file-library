@@ -1,0 +1,34 @@
+[project]
+name = "file-library"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = []
+
+[tool.pyrefly]
+project-includes = [
+    "**/*.py*",
+    "**/*.ipynb",
+]
+
+[tool.ruff.lint]
+select = [
+    "E", "F",     # Default Error & Pyflakes
+    "RUF",        # Ruff-specific rules
+    "W",          # pycodestyle warnings
+    "C4",         # flake8-comprehensions
+    "UP",         # pyupgrade
+    "ARG001",     # unused arguments in functions
+    "ANN",        # flake8-annotations (Strict type hinting)
+    "UP",         # pyupgrade (Newest type syntax: e.g., int | None)
+    "B",          # flake8-bugbear (Common logic errors)
+    "I",          # isort (Import sorting)
+]
+
+[dependency-groups]
+dev = [
+    "pyrefly>=0.51.0",
+    "pytest>=9.0.2",
+    "ruff>=0.15.0",
+]
