@@ -9,8 +9,7 @@ def library():
 
 
 @pytest.fixture
-def library_with_books():
-    library = Library()
+def library_with_books(library):
     library.add_book("To Kill a Mockingbird", "Harper Lee")
     library.add_book("1984", "George Orwell")
 
