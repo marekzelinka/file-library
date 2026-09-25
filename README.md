@@ -28,7 +28,7 @@ This project is a lightweight, strictly-typed Python application that implements
 1. **Clone the repository:**
 
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/marekzelinka/file-library
    cd file-library
    ```
 
@@ -80,6 +80,7 @@ from main import Library
 @pytest.fixture
 def library() -> Generator[Library, None, None]:
     # Setup
+    # Create a library with some books
     lib = Library()
     lib.add_book("To Kill a Mockingbird", "Harper Lee")
     lib.add_book("1984", "George Orwell")
@@ -88,6 +89,7 @@ def library() -> Generator[Library, None, None]:
     yield lib
     
     # Teardown
+    # Clear all books from the library
     lib.clear_books()
 ```
 
